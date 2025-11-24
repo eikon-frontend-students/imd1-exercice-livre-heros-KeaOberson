@@ -41,6 +41,7 @@ img {
   object-fit: cover;
 }
 .grandeimage {
+  max-height: 500px;
   aspect-ratio: 101/101;
 }
 .moyenneimage {
@@ -67,4 +68,31 @@ img {
 }
 .bouton:hover {
   transform: scale(1.05);
+}
+
+h1 {
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 4px #fff, 0 0 8px #ffd27a, 0 0 16px #ff9f1c,
+      0 0 28px rgba(255, 159, 28, 0.45);
+  }
+  to {
+    text-shadow: 0 0 6px #fff, 0 0 14px #ffe7b0, 0 0 26px #ffb347,
+      0 0 40px rgba(255, 180, 80, 0.35);
+  }
+}
+#shine {
+  animation: shine 2s infinite alternate;
+}
+@keyframes shine {
+  from {
+    filter: drop-shadow(0 0 5px #ffd27a) drop-shadow(0 0 10px #ffb347)
+      drop-shadow(0 0 20px rgba(255, 180, 80, 0.4));
+  }
+  to {
+    filter: drop-shadow(0 0 10px #fff8b0) drop-shadow(0 0 20px #ffe7b0)
+      drop-shadow(0 0 30px rgba(255, 200, 100, 0.35));
+  }
 }
